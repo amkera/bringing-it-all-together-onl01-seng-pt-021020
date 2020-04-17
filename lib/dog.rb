@@ -97,7 +97,7 @@ class Dog
       SELECT * FROM dogs WHERE name = ? AND breed = ? LIMIT 1 
     SQL
     dog = DB[:conn].execute(sql, name, breed)
-    #why not dog = DB[:conn].execute(sql, self.name, self.breed)?
+    
     
     #the above line is the query. If the dog does exists, we want to find it: 
     if !dog.empty?
