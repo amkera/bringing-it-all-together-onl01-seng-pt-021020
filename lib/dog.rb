@@ -103,7 +103,8 @@ class Dog
     #the above line is the query. If the dog does exists, we want to find it: 
     if !dog.empty?
       dog = dog[0]
-      #when two dogs have the same name and different breed, it returns the correct dog. Set dog equal to 1 
+      #when two dogs have the same name and different breed, it returns the correct dog. Set dog equal to 1.
+      #If this is the case, then the statement: !song.empty? will return true. Therefore, we will use the returned values to make a new "Dog" object that Ruby can play around with, but we will not save it to the database. That re-instantiation of an existing Dog object is accomplished with these lines:
       new_dog = Dog.new(id:dog[0],name:dog[1],breed:dog[2])
     else
       new_dog = self.create(name:name,breed:breed)
