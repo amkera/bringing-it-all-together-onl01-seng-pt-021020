@@ -108,6 +108,7 @@ class Dog
       dog = dog[0]
       new_dog = Dog.new(id:dog[0],name:dog[1],breed:dog[2])
     else
+      #However, if no record exists that matches the name and album passed in as arguments, then !song.empty? will return false, and we will instead create and save a new Song instance with the #create method.
       new_dog = self.create(name:name,breed:breed)
     end
     new_dog 
