@@ -91,7 +91,7 @@ class Dog
     new_dog
   end
   
-  def self.find_or_create_by(name:name, breed:breed)
+  def self.find_or_create_by(name:, breed:)
     #if it exists, we want to find the dog in the database. If it doesn't exist, we want to create it.
     sql = <<-SQL 
       SELECT * FROM dogs WHERE name = ? AND breed = ? LIMIT 1 
