@@ -111,6 +111,7 @@ class Dog
       #However, if no record exists that matches the name and album passed in as arguments, then !song.empty? will return false, and we will instead create and save a new Song instance with the #create method.
       new_dog = self.create(name:name,breed:breed)
     end
+    #At the end of our #find_or_create_by method, we will return the song object whose database entry we either found or created. This method assumes that there isn't already a song object matching these attributes, but that there may already exist a database entry with the same name and album. Therefore, it instantiates a new instance of the Song class while preventing a duplicate database entry.
     new_dog 
   end 
   
